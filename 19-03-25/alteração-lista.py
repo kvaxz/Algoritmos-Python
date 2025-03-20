@@ -5,4 +5,4 @@ frutas[-1] = "laranja"
 
 print(frutas)
 
-#altera oque esta na lista
+#substitui oque esta na lista

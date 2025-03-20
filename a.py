@@ -1,1 +1,0 @@
-print("SENAC HUB ACADEMY")

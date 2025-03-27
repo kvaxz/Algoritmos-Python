@@ -4,4 +4,4 @@ lista.sort()
 
 print(lista)
 
-#inverte a lista
+#variavel.sort() inverte a lista

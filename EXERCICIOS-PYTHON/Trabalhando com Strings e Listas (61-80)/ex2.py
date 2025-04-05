@@ -1,3 +1,3 @@
 lista = ["Gabriel","Joao","Pedro","Marcos"]
 
-print(" ".join(lista))
+print(lista[0:].upper())

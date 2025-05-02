@@ -44,7 +44,7 @@ elif brute > 2500:
     discounts = ir20 + inss
     print(f"Salário bruto: (R${hour_price:.2f} * {hours:.2f} horas trabalhadas) : R${brute:.2f}")
     print(f"(-) IR (20%)                                                         : R${ir20:.2f}")
-    print(f"(-) IR (10%)                                                        : R${ir20:.2f}
+    print(f"(-) IR (10%)                                                        : R${ir20:.2f}")
     print(f"(-) INSS (10%)                                                      : R${inss:.2f}")
     print(f"FGTS (11%)                                                          : R${fgts:.2f}")
     print(f"Total de descontos                                                  : R${discounts:.2f}")

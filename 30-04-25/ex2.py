@@ -37,7 +37,7 @@ while True:
             print(f"O candidato eleito foi Ederson, com {ederson} votos!")
             break
         else:
-            print(f"Houve empate, Bolsonaro com {bolsonaro} votos; Lula com {lula} votos; Neymar com {neymar} votos; Ederson com {ederson} votos!")
+            print(f"Houve algum empate, Bolsonaro com {bolsonaro} votos; Lula com {lula} votos; Neymar com {neymar} votos; Ederson com {ederson} votos!")
             break
     
     else:

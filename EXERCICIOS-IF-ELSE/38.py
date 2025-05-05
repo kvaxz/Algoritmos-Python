@@ -1,6 +1,6 @@
-number = float(input("Informe o número: "))
+number = float(input(f"Insira o número: "))
 
-if number % 10 == 0:
-    print("Multiplo de 10")
+if number % 10 == 0 :
+    print(f"{number} é divisivel por 10!")
 else:
-    print("Não é multiplo de 10")
+    print(f"{number} não é divisivel por 10!")

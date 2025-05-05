@@ -5,8 +5,6 @@ ederson = 0
 voto_nulo = 0
 voto_branco = 0
 
-
-
 while True:
 
 

@@ -31,10 +31,10 @@ while True:
         else:
             break
         
-    else:
-        print(f"\nNome: {nome}\n")
-        print(f"Idade: {idade}\n")
-        print(f"Salário:R$ {salario}\n")
-        print(f"Sexo: {sexo}\n")
-        print(f"Estado Civil: {estado_civil}\n")
-        break
+
+    print(f"\nNome: {nome}\n")
+    print(f"Idade: {idade}\n")
+    print(f"Salário:R$ {salario}\n")
+    print(f"Sexo: {sexo}\n")
+    print(f"Estado Civil: {estado_civil}\n")
+    break

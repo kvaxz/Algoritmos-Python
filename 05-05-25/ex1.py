@@ -11,51 +11,51 @@ while True:
         nome = input(f"Nome: ")
         if nome.isdigit():
             print(f"!!ERRO!! Insira um nome valído, por favor!")
-        else:
-            cadastro.append(nome)
-            break
+        
+        cadastro.append(nome)
+        break
     while True:
         cpf = (input(f"CPF: "))
         if not cpf.isdigit() or len(cpf) != 11:
             print(f"!!ERRO!! Apenas cpf valído, por favor!")
-        else:
-            cadastro.append(cpf)
-            break
+        
+        cadastro.append(cpf)
+        break
     while True:
         rg = (input(f"RG: "))
         if not rg.isdigit() or len(rg) != 7:
             print(f"!!ERRO!! Apenas rg valído, por favor!")
-        else:
-            cadastro.append(rg)
-            break
+        
+        cadastro.append(rg)
+        break
     while True:
         telefone = (input(f"Telefone: "))
         if not telefone.isdigit() or len(telefone) != 11:
             print(f"!!ERRO!! Digite apenas números, e com o DDD, por favor!")
-        else:
-            cadastro.append(telefone)
-            break
+        
+        cadastro.append(telefone)
+        break
     while True:
         n_agencia = (input(f"Número da agência: "))
         if not n_agencia.isdigit() or len(n_agencia) != 4:
             print(f"!!ERRO!! Digite uma agência valida, apenas números, por favor!")
-        else:
-            cadastro.append(n_agencia)
-            break
+    
+        cadastro.append(n_agencia)
+        break
     while True:
         n_conta = (input(f"Número da conta: "))
         if not n_conta.isdigit() or len(n_conta) != 6:
             print(f"!!ERRO!! Apenas números, e com digito, por favor!")
-        else:
-            cadastro.append(n_conta)
-            break
+        
+        cadastro.append(n_conta)
+        break
     while True:
         saldo_inicial = float(input(f"Saldo Inicial: R$"))
         if saldo_inicial < 0:
             print(f"!!ERRO!! Insira um valor valído, por favor!")
-        else:
-            cadastro.append(saldo_inicial)
-            break
+        
+        cadastro.append(saldo_inicial)
+        break
 
     print(f"Cadastro realizado!\nNome:{cadastro[0]}\nCPF:{cadastro[1]}\nRG:{cadastro[2]}\nTelefone:{cadastro[3]}\nNúmero da agência:{cadastro[4]}\nNúmero da conta:{cadastro[5]}\nSaldo Inicial:{cadastro[6]}")
 

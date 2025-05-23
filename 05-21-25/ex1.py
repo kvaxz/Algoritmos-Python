@@ -1,6 +1,9 @@
 import os #import para usar o "os.system('cls')" para limpar o terminal
 
 clientes = {}
+passagens = {}
+aviao = {}
+tripulacao = {}
 
 while True:
     print(''' 
@@ -11,6 +14,7 @@ while True:
 3 - Cadastrar avião
 4 - Cadastrar tripulação
 5 - Relátorios
+X - Encerrar programa
 
 ------------------------------------------ ''')
     while True:
@@ -80,9 +84,159 @@ while True:
              "telefone":telefone_cliente,
              "idade":idade_cliente
         }
-        print(f"\nCliente {nome_cliente}.capitalize() {sobrenome_cliente}.capitalize() cadastrado com sucesso") 
+        print(f"\nCliente {nome_cliente.capitalize()} {sobrenome_cliente.capitalize()} cadastrado com sucesso") 
 
-        print(clientes["06913517165"])
+    if action == 2:
+        while True:
+            destino_passagem = input("Destino: ")
+            if destino_passagem.isdigit():
+                print("INSIRA UM DESTINO VALÍDO!")
+            else: break
+        
+        while True:
+            origem_passagem = input("Origem: ")
+            if origem_passagem.isdigit():
+                print("INSIRA UMA ORIGEM VALÍDA!")
+            else: break
+
+        while True:
+            try:
+                duracao_passagem = float(input("Duração(em horas): "))
+                break
+            except ValueError:
+                print("DURAÇÃO APENAS EM HORAS!")
+
+        while True:
+            try:
+                valor_passagem = float(input("Valor: R$"))
+                desconto_passagem = valor_passagem * 1.05
+                break
+            except ValueError:
+                print("APENAS NÚMEROS NO VALOR!")
+
+        passagens[destino_passagem] = {
+            "destino":destino_passagem,
+            "origem":origem_passagem,
+            "duracao":duracao_passagem,
+            "valor":valor_passagem,
+            "desconto":desconto_passagem
+        }
+
+    if action == 3:
+
+        modelo_aviao = input("Modelo: ")
+
+        while True:
+            try:
+                ano_aviao = int(input("Ano: "))
+                if ano_aviao > 2026:
+                    print("ANO INVALÍDO!")
+                else: break
+            except ValueError:
+                print("APENAS NÚMEROS")
+
+        while True:
+            try:
+                horas_aviao = float(input("Horas de voo: "))
+                break
+            except ValueError:
+                print("APENAS NÚMEROS!")
+
+        while True:
+            cor_aviao = input("Cor: ")
+            if cor_aviao.isdigit():
+                print("COR INVALÍDA!")
+            else: break
+
+        while True:
+            try:
+                qntd_aviao = int(input("Passageiros: "))
+                if qntd_aviao < 0:
+                    print("VALOR INVALÍDO")
+                else: break
+            except ValueError:
+                print("APENAS NÚMEROS INTEIROS!")
+
+        aviao[modelo_aviao] = {
+            "modelo":modelo_aviao,
+            "ano":ano_aviao,
+            "horas":horas_aviao,
+            "cor":cor_aviao,
+            "quantidade":qntd_aviao
+        }
+
+    if action == 4:
+
+        while True:
+            nome_tripulacao = input("Nome: ")
+            if nome_tripulacao.isdigit():
+                print("NOME INALÍDO")
+            else: break
+        
+        while True:
+            desc_tripulacao = input("Descrição do cargo: ")
+            if len(desc_tripulacao) < 4:
+                print("DESCRIÇÃO INVALÍDA")
+            else: break
+
+        while True:
+            try:
+                idade_tripulacao = int(input("Idade: "))
+                if idade_tripulacao < 0 or idade_tripulacao > 150:
+                    print("IDADE INVALÍDA!")
+                else: break
+            except ValueError:
+                print("APENAS NÚMEROS!''")
+
+        while True:
+            try:
+                admissao_tripulacao = float(input("Data de admissão em 2025(dd.mm):"))
+                if admissao_tripulacao > 30.12:
+                    print("DATA INVALÍDA!")
+                else: break
+            except ValueError:
+                print("DATA INVALÍDA, INSIRA CONFORME JÁ INFORMADO!")
+
+        while True:
+            fone_tripulacao = int(input("Fone: "))
+            if len(fone_tripulacao) != 11:
+                print("TELEFONE INVALÍDO")
+            else: break
+
+        tripulacao[nome_tripulacao] = {
+            "nome":nome_tripulacao,
+            "desc":desc_tripulacao,
+            "idade":idade_tripulacao,
+            "admissao":admissao_tripulacao,
+            "telefone":fone_tripulacao
+        }
+
+    if action == 5:
+        print("""
+====================== RELATÓRIOS ======================
+              
+1 - Relatório dos clientes
+2 - Relatório das passagens
+3 - Relatório dos aviões
+4 - Relatório da tripulação  
+
+=========================================================                          
+""")
+
+
+
+
+
+
+
+            
+
+                
+
+        
+                
+
+
     
 
     

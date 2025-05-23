@@ -23,7 +23,7 @@ while True:
             if action not in [1,2,3,4,5,6]:
                 print("OPÇÃO INVALÍDA")
             else: break
-        except ValueError:
+        except:
             print("Digite apenas números de alguma opção")
     os.system('cls') #limpa o terminal
 
@@ -335,3 +335,5 @@ Telefone: {tripulacao[nome_tripulacao]["telefone"]}
         if action_report == 5: break
 
     if action == 6:break
+
+    

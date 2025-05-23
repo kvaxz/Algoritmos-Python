@@ -14,13 +14,15 @@ while True:
 3 - Cadastrar avião
 4 - Cadastrar tripulação
 5 - Relátorios
-X - Encerrar programa
+6 - Encerrar programa
 
 ------------------------------------------ ''')
     while True:
         try:
             action = int(input("Opção - "))
-            break
+            if action not in [1,2,3,4,5,6]:
+                print("OPÇÃO INVALÍDA")
+            else: break
         except ValueError:
             print("Digite apenas números de alguma opção")
     os.system('cls') #limpa o terminal
@@ -212,48 +214,124 @@ X - Encerrar programa
         }
 
     if action == 5:
+        os.system('cls') #limpa o terminal
         print("""
 ====================== RELATÓRIOS ======================
               
 1 - Relatório dos clientes
 2 - Relatório das passagens
 3 - Relatório dos aviões
-4 - Relatório da tripulação  
+4 - Relatório da tripulação
+5 - Sair da Janela  
 
 =========================================================                          
 """)
-
-
-
-
-
-
-
-            
-
-                
-
         
+        while True:
+            try:
+                action_report = int(input("Opção - "))
+                if action_report not in [1,2,3,4,5]:
+                    print("APENAS ALGUMA DAS OPÇÕES")
+                else:
+                    os.system('cls') #limpa o terminal
+                    break
+            except ValueError:
+                print("OPÇÃO INVALIDA!")
+
+        if action_report == 1:
+            os.system('cls') #limpa o terminal
+            while True:
+                consulta_cliente = input("""
+    [============================================================]
+    [-----------Insira o CPF do cliente para relatório-----------]                                  
+    [============================================================]
+    CPF: """)
                 
+                cpf_cliente = consulta_cliente
 
+                if cpf_cliente not in clientes:
+                    print("CPF NÃO CONSTA NOS CLIENTES")
+                else: break
 
-    
+            print(f"""
+Nome: {clientes[cpf_cliente]["nome"].capitalize()}
+Sobrenome: {clientes[cpf_cliente]["sobrenome"].capitalize()}
+RG: {clientes[cpf_cliente]["rg"]}
+CPF: {clientes[cpf_cliente]["cpf"]}
+Endereço: {clientes[cpf_cliente]["endereco"]}
+Telefone: {clientes[cpf_cliente]["telefone"]}
+Idade: {clientes[cpf_cliente]["idade"]}
+""")
+        
+        if action_report == 2:
+            os.system('cls') #limpa o terminal
+            while True:
+                consulta_passagem = input("""
+    [============================================================]
+    [--------------Insira o destino para relatório---------------]                                  
+    [============================================================]
+    Destino: """)
+                
+                destino_passagem = consulta_passagem
 
-    
+                if destino_passagem not in passagens:
+                    print("DESTINO NÃO CONSTA NO SISTEMA")
+                else: break
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        break
+            print(f"""
+Destino: {passagens[destino_passagem]["destino"].capitalize()}
+Origem: {passagens[destino_passagem]["origem"].capitalize()}
+Duração: {passagens[destino_passagem]["duracao"]}
+Valor: {passagens[destino_passagem]["valor"]}
+Valor com desconto: {passagens[destino_passagem]["desconto"]}
+""")
+        
+        if action_report == 3:
+            os.system('cls') #limpa o terminal
+            while True:
+                consulta_aviao = input("""
+    [============================================================]
+    [----------Insira o modelo do avião para relatório-----------]                                  
+    [============================================================]
+    Modelo: """)
+                
+                modelo_aviao = consulta_aviao
+
+                if modelo_aviao not in aviao:
+                    print("MODELO NÃO CONSTA NO SISTEMA")
+                else: break
+
+            print(f"""
+Modelo: {aviao[modelo_aviao]["modelo"].capitalize()}
+Ano: {aviao[modelo_aviao]["ano"].capitalize()}
+Horas: {aviao[modelo_aviao]["horas"]}
+Cor: {aviao[modelo_aviao]["cor"]}
+Quantidade de passageiros: {aviao[modelo_aviao]["quantidade"]}
+""")
+            
+        if action_report == 4:
+            os.system('cls') #limpa o terminal
+            while True:
+                consulta_tripulacao = input("""
+    [============================================================]
+    [--------Insira o nome do tripulante para relatório----------]                                  
+    [============================================================]
+    Modelo: """)
+                
+                nome_tripulacao = consulta_tripulacao
+
+                if nome_tripulacao not in tripulacao:
+                    print("NOME NÃO CONSTA NO SISTEMA")
+                else: break
+
+            print(f"""
+Nome: {tripulacao[nome_tripulacao]["nome"].capitalize()}
+Descrição: {tripulacao[nome_tripulacao]["desc"].capitalize()}
+Idade: {tripulacao[nome_tripulacao]["idade"]}
+Data de admissão: {tripulacao[nome_tripulacao]["admissao"]}
+Telefone: {tripulacao[nome_tripulacao]["telefone"]}
+""")
+            
+        if action_report == 5: break
+
+    if action == 6:break

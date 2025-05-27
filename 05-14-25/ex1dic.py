@@ -209,8 +209,6 @@ while True:
         
         dicionario[palavranova] = traducaonova
 
-        print(dicionario["gabriel"])
-
     elif ação == 3:
         print("------- Bye =) -------")
         break

@@ -7,4 +7,3 @@ while True:
         print("Erro desconhecido!")
     finally:
         print("Final do algoritmo")
-        break

@@ -1,0 +1,1 @@
+f = open("open.txt","w")#"w" abre um arquivo para escrita, cria o arquivo se ele não existir. Se o arquivo existir ele sobresceve o conteúdo

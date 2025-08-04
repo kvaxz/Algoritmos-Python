@@ -335,5 +335,3 @@ Telefone: {tripulacao[nome_tripulacao]["telefone"]}
         if action_report == 5: break
 
     if action == 6:break
-
-    

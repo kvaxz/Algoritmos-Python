@@ -18,7 +18,7 @@ class gerente(funcionario):
         self.setor = setor
     
     def logar(self):
-        confirm = input("Digite o token")
+        confirm = input("Digite o token: ")
         if confirm:
             print(f"Gerente {self.nome} logado no sistema com sucesso")
 

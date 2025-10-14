@@ -44,7 +44,7 @@ class Vendedor(Funcionario):
                 print("Coloque algo valido pfv!")
 
 class Gerente(Funcionario):
-    def __init__(self, nome, matricula, setor, salario=float, num_vendedores = int):
+    def __init__(self, nome, matricula, setor, salario=float, num_vendedores=int):
         super().__init__(nome, matricula, salario)
         self.setor = setor
         self.num_vendedores = num_vendedores

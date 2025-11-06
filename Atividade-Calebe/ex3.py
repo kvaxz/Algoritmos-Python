@@ -72,7 +72,7 @@ def maior_menor(lista_alunos):
 
 def main():
     
-    num_alunos = 1
+    num_alunos = 5
     lista_alunos = []
 
     print("**** INÍCIO DO CADASTRO DE ALUNOS ****")
@@ -80,15 +80,13 @@ def main():
     for i in range(1, num_alunos + 1):
         aluno = obter_dados_aluno(i) 
         lista_alunos.append(aluno)
-
-    print(lista_alunos)
         
     print("\n" + "="*50)
     print("           RELATÓRIO DE DESEMPENHO")
     print("="*50)
     print("\n**Situação de Todos os Alunos (Média de Corte 6.0)**")
     for aluno in lista_alunos:
-        print(aluno[1])
+        print(aluno)
     print("-" * 50)
     
     aluno_melhor, aluno_pior = maior_menor(lista_alunos)

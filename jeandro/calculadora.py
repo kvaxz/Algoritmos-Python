@@ -10,8 +10,17 @@ def calculo():
     try:
         valor1 = float(entrada1.get())
         valor2 = float(entrada2.get())
+        operacao = EntradaOperacao.get()
  
-        calcular = valor1 + valor2
+        if operacao == "+":
+            calcular = valor1 + valor2
+        elif operacao == "-":
+            calcular = valor1 - valor2
+        elif operacao == "*":
+           calcular = valor1 * valor2
+        elif operacao == "/":
+            calcular = valor1 / valor2
+ 
         result.config(text=f"Resultado: {calcular}")
     except:
         result.config(text=f"Informe Numeros Validos")
@@ -31,7 +40,11 @@ entrada2 = tk.Entry(janela)
 entrada2.pack()
  
  
+Labeloperacao = tk.Label(janela,text="Informe a operação: ")
+Labeloperacao.pack()
  
+EntradaOperacao = tk.Entry(janela)
+EntradaOperacao.pack()
  
 result = tk.Label(janela, text="Resultado: ")
 result.pack()
@@ -42,4 +55,3 @@ botao.pack()
  
  
 janela.mainloop()
- 
